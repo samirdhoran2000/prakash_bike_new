@@ -1,12 +1,24 @@
-import { ChevronRight, Star, Clock, Gauge, Fuel } from "lucide-react";
+import { ChevronRight, Star, Clock, Gauge, Fuel, BookOpen } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Modal = ({ bike, isOpen, onClose }) => {
+  const navigate = useNavigate();
+
   if (!isOpen) return null;
+
+  const handleReadMore = () => {
+    onClose(); // Close the modal first
+    // navigate(bike.navigateTo); // Navigate to the detail page
+    navigate("/bikes/comming_soon"); // Navigate to the detail page
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose}></div>
-      
+      <div
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onClick={onClose}
+      ></div>
+
       <div className="relative w-full max-w-2xl bg-gray-900/90 backdrop-blur-md rounded-xl overflow-hidden border border-white/10">
         <button
           onClick={onClose}
@@ -32,7 +44,9 @@ const Modal = ({ bike, isOpen, onClose }) => {
                 <Star size={12} />
                 {bike.category.toUpperCase()}
               </span>
-              <h2 className="text-2xl font-medium text-white/90">{bike.bikeName}</h2>
+              <h2 className="text-2xl font-medium text-white/90">
+                {bike.bikeName}
+              </h2>
             </div>
 
             <p className="text-white/60">{bike.desc}</p>
@@ -45,7 +59,9 @@ const Modal = ({ bike, isOpen, onClose }) => {
                 </div>
                 <div className="text-center">
                   <p className="text-xs text-white/60">Mileage</p>
-                  <p className="text-sm font-medium text-white/90">{bike.mileage}</p>
+                  <p className="text-sm font-medium text-white/90">
+                    {bike.mileage}
+                  </p>
                 </div>
               </div>
               <div className="bg-white/5 p-4 rounded-lg space-y-2">
@@ -54,7 +70,9 @@ const Modal = ({ bike, isOpen, onClose }) => {
                 </div>
                 <div className="text-center">
                   <p className="text-xs text-white/60">Top Speed</p>
-                  <p className="text-sm font-medium text-white/90">{bike.topSpeed}</p>
+                  <p className="text-sm font-medium text-white/90">
+                    {bike.topSpeed}
+                  </p>
                 </div>
               </div>
               <div className="bg-white/5 p-4 rounded-lg space-y-2">
@@ -63,23 +81,35 @@ const Modal = ({ bike, isOpen, onClose }) => {
                 </div>
                 <div className="text-center">
                   <p className="text-xs text-white/60">Fuel Type</p>
-                  <p className="text-sm font-medium text-white/90">{bike.fuelType}</p>
+                  <p className="text-sm font-medium text-white/90">
+                    {bike.fuelType}
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Price and Action */}
+            {/* Price and Actions */}
             <div className="flex items-center justify-between pt-4 border-t border-white/10">
               <p className="text-lg font-medium text-white/90">
-                ₹{bike.ammount}<span className="text-white/60">/day</span>
+                ₹{bike.ammount}
+                <span className="text-white/60">/day</span>
               </p>
-              <a
-                href={`https://wa.me/917378753636?text=Hello%20Gurukrupa%20Sales%20and%20Services,%20I'd%20like%20to%20inquire%20about%20the%20${bike.bikeName}.`}
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:translate-x-1"
-              >
-                Book Now
-                <ChevronRight size={20} />
-              </a>
+              <div className="flex gap-3">
+                <button
+                  onClick={handleReadMore}
+                  className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/80 px-4 py-3 rounded-xl font-semibold transition-all duration-300"
+                >
+                  Read More
+                  <BookOpen size={20} />
+                </button>
+                <a
+                  href={`https://wa.me/917378753636?text=Hello%20Gurukrupa%20Sales%20and%20Services,%20I'd%20like%20to%20inquire%20about%20the%20${bike.bikeName}.`}
+                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:translate-x-1"
+                >
+                  Book Now
+                  <ChevronRight size={20} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -87,4 +117,5 @@ const Modal = ({ bike, isOpen, onClose }) => {
     </div>
   );
 };
+
 export default Modal;

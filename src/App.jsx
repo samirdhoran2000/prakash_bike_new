@@ -1,5 +1,6 @@
-import React from "react";
+import "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Hero from "./components/Hero";
 import Service from "./components/Service";
 import Footer from "./components/Footer";
@@ -10,14 +11,36 @@ import BikeData from "./assets/BikeData.js";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfService from "./components/TermsOfService";
 import FourWheelerAd from "./components/FourWheelerAd";
-import Blog from "./components/Blog";
 import About from "./components/About";
-
+import VehicleDetailPage from "./components/VehicleDetailPage";
+import RoyalEnfieldDetailPage from "./components/RoyalEnfieldDetailPage";
+import HondaActiva125 from "./components/HondaActiva125.jsx";
+import TvsRaider125 from "./components/TvsRaider.jsx";
+import TvsJupiter from "./components/TvsJupiter.jsx";
+import HondaShine from "./components/HondaShine.jsx";
+import VespaClassic from "./components/VespaClassic.jsx";
+import HondaUnicorn from "./components/HondaUnicorn.jsx";
+import VehicleCard from "./components/VehicleCard.jsx";
+import CommingSoon from "./components/CommingSoon.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 const App = () => {
   
   return (
     <Router>
       <div className="min-h-screen bg-gray-900 text-white font-sans">
+        <ScrollToTop />
+        <Helmet>
+          <title>
+            Gurukrupa Sale and Rentals, Two Wheeler & Four Wheeler, Hinjawadi
+            Bike Rental Bikes and Scooter
+          </title>
+          <meta
+            name="description"
+            content="Gurukrupa Rental and Bikes & Services, based in Hinjawadi, Pune, offers a diverse selection of two-wheeler and four-wheeler rental options. Our fleet includes well-maintained bikes, scooters, and cars, ensuring a safe and enjoyable ride for our customers. We provide flexible rental plans—daily, weekly, and monthly—to accommodate various needs. Our commitment to customer satisfaction is reflected in our professional service and competitive pricing.
+
+For more information or to make a booking, please visit our website at [hinjawadibike.com](https://hinjawadibike.com/) or contact us at +91 73787-53636. "
+          />
+        </Helmet>
         <Routes>
           <Route
             path="/"
@@ -39,7 +62,25 @@ const App = () => {
           />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
-          <Route path="/blog/:bikeId" element={<Blog />} />
+
+          {/* <Route
+            path="/bikes/royal_enfield_classic_350"
+            element={<RoyalEnfieldDetailPage />}
+          />
+          <Route path="/bikes/honda_activa_125" element={<HondaActiva125 />} />
+          <Route path="/bikes/tvs_raider" element={<TvsRaider125 />} />
+          <Route path="/bikes/tvs_jupiter" element={<TvsJupiter />} />
+          <Route path="/bikes/honda_shine" element={<HondaShine />} />
+          <Route path="/bikes/vespa_classic" element={<VespaClassic />} />
+          <Route path="/bikes/honda_unicorn" element={<HondaUnicorn />} />
+          <Route path="/bikes/any" element={<VehicleCard />} /> */}
+          <Route path="/bikes/comming_soon" element={<CommingSoon />} />
+          {/* <Route path="/blog" element={<HondaShineBlogArticle />} /> */}
+
+          <Route
+            path="/vehicles/tata-altroz-icng"
+            element={<VehicleDetailPage />}
+          />
         </Routes>
         <Footer />
       </div>

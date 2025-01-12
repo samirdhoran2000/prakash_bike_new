@@ -43,12 +43,12 @@ const About = () => {
           <div className="relative">
             <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
               <img
-                src="./Yellow_Bike.webp"
+                src="./Sun_Bike.webp"
                 alt="About SHIFT"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-yellow-400 text-black p-4 rounded-lg">
+            <div className="absolute -bottom-6 -right-2 bg-yellow-400 text-black p-4 rounded-lg">
               <p className="text-2xl font-bold">5+ Years</p>
               <p className="text-sm">of Excellence</p>
             </div>
@@ -60,8 +60,8 @@ const About = () => {
               Your Premier Destination for Premium Bike Rentals
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              At SHIFT, we're passionate about providing exceptional bike rental
-              experiences. Founded in 2018, we've been serving riders with a
+              At SHIFT, we&apos;re passionate about providing exceptional bike rental
+              experiences. Founded in 2018, we&apos;ve been serving riders with a
               curated fleet of well-maintained bikes, personalized service, and
               competitive rates.
             </p>

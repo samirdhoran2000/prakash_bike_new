@@ -10,6 +10,7 @@ const BikeData = [
     topSpeed: "130 km/h",
     fuelType: "Petrol",
     desc: "Experience the legendary charm of the Royal Enfield Classic 350 as you ride into the essence of timeless elegance and unmatched power on your rental journey.",
+    navigateTo:"/bikes/royal_enfield_classic_350",
   },
   {
     bikeId: 2,
@@ -22,6 +23,8 @@ const BikeData = [
     topSpeed: "85 km/h",
     fuelType: "Petrol",
     desc: "Effortless elegance meets seamless performance - experience the city in style with our Activas for rent.",
+    navigateTo:"/bikes/honda_activa_125",
+
   },
   {
     bikeId: 3,
@@ -34,6 +37,8 @@ const BikeData = [
     topSpeed: "120 km/h",
     fuelType: "Petrol",
     desc: "Unleash the rider in you with TVS - where every journey is a symphony of freedom, power, and unforgettable experiences.",
+    navigateTo:"/bikes/tvs_raider",
+
   },
   {
     bikeId: 4,
@@ -46,6 +51,8 @@ const BikeData = [
     topSpeed: "85 km/h",
     fuelType: "Petrol",
     desc: "Ride the epitome of style and reliability with TVS Jupiter - where every journey becomes an effortless joyride on two wheels.",
+    navigateTo:"/bikes/tvs_jupiter",
+
   },
   {
     bikeId: 5,
@@ -58,6 +65,8 @@ const BikeData = [
     topSpeed: "110 km/h",
     fuelType: "Petrol",
     desc: "Ride the elegance, embrace the performance - Honda Shine, where every journey becomes a shimmering experience in motion.",
+    navigateTo:"/bikes/honda_shine",
+
   },
   {
     bikeId: 6,
@@ -70,6 +79,8 @@ const BikeData = [
     topSpeed: "90 km/h",
     fuelType: "Petrol",
     desc: "Embrace the allure of a bygone era with our classic Vespa rentals—a timeless ride that effortlessly blends style and sophistication on the urban streets.",
+    navigateTo:"/bikes/vespa_classic",
+
   },
   {
     bikeId: 7,
@@ -82,6 +93,8 @@ const BikeData = [
     topSpeed: "115 km/h",
     fuelType: "Petrol",
     desc: "Unleash the power of smooth rides and unmatched reliability with the Honda Shine - your perfect companion for rental adventures on two wheels.",
+    navigateTo:"/bikes/honda_unicorn",
+
   },
   {
     bikeId: 8,
@@ -94,6 +107,8 @@ const BikeData = [
     topSpeed: "85 km/h",
     fuelType: "Petrol",
     desc: "Elevate your ride, seize the city with Suzuki Access 125 – where style meets performance in every rental journey.",
+    navigateTo:"/bikes/suzuki_access_125",
+
   },
   {
     bikeId: 9,
@@ -106,6 +121,8 @@ const BikeData = [
     topSpeed: "120 km/h",
     fuelType: "Petrol",
     desc: "Unleash the power of Yamaha FZ: Elevate your ride, amplify the thrill. Experience the pinnacle of performance with our premium FZ rentals.",
+    navigateTo:"/bikes/yamaha_fz",
+
   },
   {
     bikeId: 10,
@@ -118,6 +135,8 @@ const BikeData = [
     topSpeed: "95 km/h",
     fuelType: "Petrol",
     desc: "Experience urban exhilaration with the TVS Ntorq 125 – redefine your ride, redefine your journey, now available for rent.",
+    navigateTo:"/bikes/tvs_ntorque_125",
+
   },
   {
     bikeId: 11,
@@ -130,6 +149,8 @@ const BikeData = [
     topSpeed: "125 km/h",
     fuelType: "Petrol",
     desc: "Ride the adrenaline wave with our TVS Apache rentals - where precision meets performance, and every journey becomes a symphony of speed and style.",
+    navigateTo:"/bikes/tvs_apache",
+
   },
   {
     bikeId: 12,
@@ -142,6 +163,8 @@ const BikeData = [
     topSpeed: "135 km/h",
     fuelType: "Petrol",
     desc: "Elevate your adrenaline with our Bajaj Pulsar 220 rentals—where power meets precision, offering an exhilarating ride for those who crave speed and performance on every journey.",
+    navigateTo:"/bikes/bajaj_pulsar_220",
+
   },
   {
     bikeId: 13,
@@ -154,6 +177,8 @@ const BikeData = [
     topSpeed: "115 km/h",
     fuelType: "Petrol",
     desc: "Unleash the thrill of the road with our Bajaj Pulsar 150 rentals—where style meets performance for an unforgettable ride that's as dynamic as you are.",
+    navigateTo:"/bikes/bajaj_pulsar_150",
+
   },
   {
     bikeId: 14,
@@ -166,6 +191,8 @@ const BikeData = [
     topSpeed: "90 km/h",
     fuelType: "Petrol",
     desc: "Embark on a journey of reliability and comfort with our Honda Dream Yuga rentals—a seamless blend of efficiency and style for a smooth and enjoyable ride.",
+    navigateTo:"/bikes/honda_dream_yuga_110",
+
   },
 ];
 

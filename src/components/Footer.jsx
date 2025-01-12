@@ -124,7 +124,7 @@ const Footer = () => {
               >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.9210663529684!2d73.7354821376651!3d18.598310616009293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb1058e0556f%3A0xb0a9356c5227a980!2sGuru%20Krupa%20Bike%20Rentals!5e!3m2!1sen!2sin!4v1707385263850!5m2!1sen!2sin"
-                  className="w-full h-64 grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-64 md:grayscale grayscale-0 hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                   title="Our Location"
                 ></iframe>
