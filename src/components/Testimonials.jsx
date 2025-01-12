@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Testimonials = () => {
   return (
@@ -12,16 +12,20 @@ const Testimonials = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-            <p className="italic">&ldquo;The best bike rental service ever!&quot;</p>
+            <p className="italic">
+              &ldquo;The best bike rental service ever!&quot;
+            </p>
             <span className="block mt-4 font-bold">- Samir, Pune</span>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-            <p className="italic">&ldquo;Loved the retro vibes and smooth rides.&ldquo;</p>
+            <p className="italic">
+              &ldquo;Loved the retro vibes and smooth rides.&ldquo;
+            </p>
             <span className="block mt-4 font-bold">- Amol, Pune</span>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg shadow-md text-center">
             <p className="italic">
-              &ldquo;SHIFT made my mountain trip unforgettable.&ldquo;
+              &ldquo;Hinjawadi Rides made my mountain trip unforgettable.&ldquo;
             </p>
             <span className="block mt-4 font-bold">- Nikhil, Mumbai</span>
           </div>
@@ -29,6 +33,6 @@ const Testimonials = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Testimonials
+export default Testimonials;

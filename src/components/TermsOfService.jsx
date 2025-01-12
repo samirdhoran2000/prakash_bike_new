@@ -24,8 +24,8 @@ const TermsOfService = () => {
               1. Rental Agreement
             </h2>
             <p className="text-gray-300">
-              By renting a vehicle from SHIFT, you agree to the following terms
-              and conditions...
+              By renting a vehicle from Hinjawadi Rides, you agree to the
+              following terms and conditions...
             </p>
           </section>
 

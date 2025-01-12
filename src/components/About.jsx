@@ -32,7 +32,7 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-yellow-400 mb-4">
-            About SHIFT
+            About Hinjawadi Rides
           </h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div>
         </div>
@@ -44,7 +44,7 @@ const About = () => {
             <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
               <img
                 src="./Sun_Bike.webp"
-                alt="About SHIFT"
+                alt="About Hinjawadi Rides"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -60,10 +60,10 @@ const About = () => {
               Your Premier Destination for Premium Bike Rentals
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              At SHIFT, we&apos;re passionate about providing exceptional bike rental
-              experiences. Founded in 2018, we&apos;ve been serving riders with a
-              curated fleet of well-maintained bikes, personalized service, and
-              competitive rates.
+              At Hinjawadi Rides, we&apos;re passionate about providing
+              exceptional bike rental experiences. Founded in 2018, we&apos;ve
+              been serving riders with a curated fleet of well-maintained bikes,
+              personalized service, and competitive rates.
             </p>
 
             {/* Features Grid */}

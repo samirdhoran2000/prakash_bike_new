@@ -32,14 +32,51 @@ const App = () => {
         <Helmet>
           <title>
             Gurukrupa Sale and Rentals, Two Wheeler & Four Wheeler, Hinjawadi
-            Bike Rental Bikes and Scooter
+            Bike Rental Bikes and Scooter | Hinjawadi Rides
           </title>
           <meta
             name="description"
-            content="Gurukrupa Rental and Bikes & Services, based in Hinjawadi, Pune, offers a diverse selection of two-wheeler and four-wheeler rental options. Our fleet includes well-maintained bikes, scooters, and cars, ensuring a safe and enjoyable ride for our customers. We provide flexible rental plans—daily, weekly, and monthly—to accommodate various needs. Our commitment to customer satisfaction is reflected in our professional service and competitive pricing.
+            content="Gurukrupa Rental and Bikes & Services, operating under the brand name Hinjawadi Rides, based in Hinjawadi, Pune, offers a diverse selection of two-wheeler and four-wheeler rental options. Our fleet includes well-maintained bikes, scooters, and cars, ensuring a safe and enjoyable ride for our customers. We provide flexible rental plans—daily, weekly, and monthly—to accommodate various needs. Our commitment to customer satisfaction is reflected in our professional service and competitive pricing.
 
 For more information or to make a booking, please visit our website at [hinjawadibike.com](https://hinjawadibike.com/) or contact us at +91 73787-53636. "
           />
+        </Helmet>
+        <Helmet>
+          <title>Gurukrupa Rental and Bikes & Services</title>
+          <meta
+            name="description"
+            content="Explore a wide range of high-quality rental products at Gurukrupa Rental & Sales Services Shop. From tools and equipment to party supplies, we offer affordable and reliable rental solutions. Serving Hinjawadi, Pune, Maharashtra, India with convenient rental services."
+          />
+          <meta
+            name="keywords"
+            content="Gurukrupa Rental Shop, rental services, tools rental, equipment rental, party supplies, affordable rentals, reliable rentals, Gurukrupa Sales and Services, Lakshmi Chowk Road Hinjawadi, Behind MRF Showroom, Near Mukai Food Court, Mukai Nagar, Hinjawadi-411057, Pune, Maharashtra, India rentals"
+          />
+          <meta
+            name="author"
+            content="Prakash Indure, Gurukrupa Rental and Sales & Services Shop"
+          />
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "LocalBusiness",
+              name: "Gurukrupa Rental and Sales Services",
+              description:
+                "Explore a wide range of high-quality rental products at Gurukrupa Rental & Sales Services Shop. From tools and equipment to party supplies, we offer affordable and reliable rental solutions. Serving Hinjawadi, Pune, Maharashtra, India with convenient rental services.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Lakshmi Chowk Road",
+                addressLocality: "Hinjawadi",
+                addressRegion: "Pune",
+                postalCode: "411057",
+                addressCountry: "India",
+              },
+              telephone: "+91-7378753636",
+              url: "https://hinjawadibike.com",
+              image:
+                "https://github.com/samirdhoran2000/prakash_bike/blob/master/public/Gurukrupa.png",
+              priceRange: "$$",
+            })}
+          </script>
         </Helmet>
         <Routes>
           <Route

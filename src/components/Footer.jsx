@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-yellow-400 mb-2">
-                  SHIFT
+                  Hinjawadi Rides
                 </h2>
                 <p className="text-gray-400 max-w-sm">
                   Your premier destination for premium bike rentals in Mammoth,
