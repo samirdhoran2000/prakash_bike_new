@@ -13,23 +13,27 @@ import TermsOfService from "./components/TermsOfService";
 import FourWheelerAd from "./components/FourWheelerAd";
 import About from "./components/About";
 import VehicleDetailPage from "./components/VehicleDetailPage";
-import RoyalEnfieldDetailPage from "./components/RoyalEnfieldDetailPage";
-import HondaActiva125 from "./components/HondaActiva125.jsx";
-import TvsRaider125 from "./components/TvsRaider.jsx";
-import TvsJupiter from "./components/TvsJupiter.jsx";
-import HondaShine from "./components/HondaShine.jsx";
-import VespaClassic from "./components/VespaClassic.jsx";
-import HondaUnicorn from "./components/HondaUnicorn.jsx";
-import VehicleCard from "./components/VehicleCard.jsx";
+// import RoyalEnfieldDetailPage from "./components/RoyalEnfieldDetailPage";
+// import HondaActiva125 from "./components/HondaActiva125.jsx";
+// import TvsRaider125 from "./components/TvsRaider.jsx";
+// import TvsJupiter from "./components/TvsJupiter.jsx";
+// import HondaShine from "./components/HondaShine.jsx";
+// import VespaClassic from "./components/VespaClassic.jsx";
+// import HondaUnicorn from "./components/HondaUnicorn.jsx";
+// import VehicleCard from "./components/VehicleCard.jsx";
 import CommingSoon from "./components/CommingSoon.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import AboutUs from "./components/AboutUs.jsx";
+// import Header from "./components/Header";
+
 const App = () => {
   
   return (
     <Router>
       <div className="min-h-screen bg-gray-900 text-white font-sans">
         <ScrollToTop />
+        {/* <Header /> */}
+
         <Helmet>
           <title>
             Gurukrupa Sale and Rentals, Two Wheeler & Four Wheeler, Hinjawadi
@@ -43,14 +47,9 @@ For more information or to make a booking, please visit our website at [hinjawad
           />
         </Helmet>
         <Helmet>
-          <title>Gurukrupa Rental and Bikes & Services</title>
-          <meta
-            name="description"
-            content="Explore a wide range of high-quality rental products at Gurukrupa Rental & Sales Services Shop. From tools and equipment to party supplies, we offer affordable and reliable rental solutions. Serving Hinjawadi, Pune, Maharashtra, India with convenient rental services."
-          />
           <meta
             name="keywords"
-            content="Gurukrupa Rental Shop, rental services, tools rental, equipment rental, party supplies, affordable rentals, reliable rentals, Gurukrupa Sales and Services, Lakshmi Chowk Road Hinjawadi, Behind MRF Showroom, Near Mukai Food Court, Mukai Nagar, Hinjawadi-411057, Pune, Maharashtra, India rentals"
+            content="Gurukrupa Rental Shop, rental services, tools rental, equipment rental, party supplies, affordable rentals, reliable rentals, Gurukrupa Sales and Services, Lakshmi Chowk Road Hinjawadi, Behind MRF Showroom, Near Mukai Food Court, Mukai Nagar, Hinjawadi-411057, Pune, Maharashtra, India rentals, Hinjewadi Rentals, Hinjewadi"
           />
           <meta
             name="author"
@@ -74,7 +73,7 @@ For more information or to make a booking, please visit our website at [hinjawad
               telephone: "+91-7378753636",
               url: "https://hinjawadibike.com",
               image:
-                "https://github.com/samirdhoran2000/prakash_bike/blob/master/public/Gurukrupa.png",
+                "https://github.com/samirdhoran2000/prakash_bike_new/blob/main/public/Bike_Logo.png",
               priceRange: "$$",
             })}
           </script>
