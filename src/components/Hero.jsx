@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,9 +19,18 @@ const Hero = () => {
       <nav className="relative z-20 px-4 sm:px-6 lg:px-8 py-4 bg-black bg-opacity-80">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl sm:text-2xl font-extrabold text-yellow-400 tracking-wide">
-            Hinjawadi Rides
+            <Link to={'/'}>
+          <div className="flex items-center space-x-2">
+            <img
+              src="/Bike_Logo.png"
+              alt="Hinjawadi Rides Logo"
+              className="w-28 h-28 sm:w-10 sm:h-10"
+              />
+            <div className="text-xl sm:text-2xl font-extrabold text-yellow-400 tracking-wide">
+              Hinjawadi Rides
+            </div>
           </div>
+              </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-4 lg:space-x-8">
@@ -33,12 +43,12 @@ const Hero = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#about"
+              <Link
+                to="/about"
                 className="hover:text-yellow-400 transition-colors"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -73,13 +83,13 @@ const Hero = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#about"
+                <Link
+                  to="/about"
                   className="block text-white hover:text-yellow-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <a

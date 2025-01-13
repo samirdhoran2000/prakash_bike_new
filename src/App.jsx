@@ -23,6 +23,7 @@ import HondaUnicorn from "./components/HondaUnicorn.jsx";
 import VehicleCard from "./components/VehicleCard.jsx";
 import CommingSoon from "./components/CommingSoon.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import AboutUs from "./components/AboutUs.jsx";
 const App = () => {
   
   return (
@@ -99,6 +100,7 @@ For more information or to make a booking, please visit our website at [hinjawad
           />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/about" element={<AboutUs />} />
 
           {/* <Route
             path="/bikes/royal_enfield_classic_350"
