@@ -22,7 +22,8 @@ const Hero = () => {
         </h1>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mt-4 mb-8 max-w-xl sm:max-w-2xl lg:max-w-3xl">
           A futuristic journey begins with a single ride. Rent the yellow sports
-          bike of tomorrow and conquer the roads of Mammoth, California.
+          bike of tomorrow and conquer the roads of Hinjawadi, Pune,
+          Maharashtra.
         </p>
         <a href="tel:+917378753636">
           <button className="bg-yellow-400 text-black px-6 py-3 rounded-md font-bold text-base sm:text-lg hover:bg-transparent hover:text-yellow-400 border border-yellow-400 transition-all duration-300 transform hover:scale-105">

@@ -33,8 +33,8 @@ const Footer = () => {
                   Hinjawadi Rides
                 </h2>
                 <p className="text-gray-400 max-w-sm">
-                  Your premier destination for premium bike rentals in Mammoth,
-                  California. Experience the thrill of the road with our
+                  Your premier destination for premium bike rentals in Hinjawadi, Pune,
+                  Maharashtra. Experience the thrill of the road with our
                   top-tier service.
                 </p>
               </div>

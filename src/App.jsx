@@ -1,5 +1,10 @@
 import "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Hero from "./components/Hero";
 import Service from "./components/Service";
@@ -13,55 +18,54 @@ import TermsOfService from "./components/TermsOfService";
 import FourWheelerAd from "./components/FourWheelerAd";
 import About from "./components/About";
 import VehicleDetailPage from "./components/VehicleDetailPage";
-// import RoyalEnfieldDetailPage from "./components/RoyalEnfieldDetailPage";
-// import HondaActiva125 from "./components/HondaActiva125.jsx";
-// import TvsRaider125 from "./components/TvsRaider.jsx";
-// import TvsJupiter from "./components/TvsJupiter.jsx";
-// import HondaShine from "./components/HondaShine.jsx";
-// import VespaClassic from "./components/VespaClassic.jsx";
-// import HondaUnicorn from "./components/HondaUnicorn.jsx";
-// import VehicleCard from "./components/VehicleCard.jsx";
 import CommingSoon from "./components/CommingSoon.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import AboutUs from "./components/AboutUs.jsx";
-// import Header from "./components/Header";
+import ReactGA from "react-ga4";
+import { useEffect } from "react";
+
+// Initialize Google Analytics
+ReactGA.initialize("G-9DZ0BJ023F");
+
+const TrackPageView = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
+  return null;
+};
 
 const App = () => {
-  
   return (
     <Router>
+      <TrackPageView />
       <div className="min-h-screen bg-gray-900 text-white font-sans">
         <ScrollToTop />
-        {/* <Header /> */}
 
+        {/* SEO Optimization */}
         <Helmet>
           <title>
-            Gurukrupa Sale and Rentals, Two Wheeler & Four Wheeler, Hinjawadi
-            Bike Rental Bikes and Scooter | Hinjawadi Rides
+            Gurukrupa Sale and Rentals | Two-Wheeler & Four-Wheeler Rental |
+            Hinjawadi Rides
           </title>
           <meta
             name="description"
-            content="Gurukrupa Rental and Bikes & Services, operating under the brand name Hinjawadi Rides, based in Hinjawadi, Pune, offers a diverse selection of two-wheeler and four-wheeler rental options. Our fleet includes well-maintained bikes, scooters, and cars, ensuring a safe and enjoyable ride for our customers. We provide flexible rental plans—daily, weekly, and monthly—to accommodate various needs. Our commitment to customer satisfaction is reflected in our professional service and competitive pricing.
-
-For more information or to make a booking, please visit our website at [hinjawadibike.com](https://hinjawadibike.com/) or contact us at +91 73787-53636. "
+            content="Rent the best bikes and scooters at affordable prices in Hinjawadi, Pune. Explore our range of two-wheelers and four-wheelers for an amazing ride."
           />
-        </Helmet>
-        <Helmet>
           <meta
             name="keywords"
-            content="Gurukrupa Rental Shop, rental services, tools rental, equipment rental, party supplies, affordable rentals, reliable rentals, Gurukrupa Sales and Services, Lakshmi Chowk Road Hinjawadi, Behind MRF Showroom, Near Mukai Food Court, Mukai Nagar, Hinjawadi-411057, Pune, Maharashtra, India rentals, Hinjewadi Rentals, Hinjewadi"
+            content="bike rental, rent bikes, affordable bike rental, bike hire, Hinjawadi bike, scooter rental, two-wheeler rental, four-wheeler rental, Pune bike rental"
           />
-          <meta
-            name="author"
-            content="Prakash Indure, Gurukrupa Rental and Sales & Services Shop"
-          />
+          <meta name="author" content="Gurukrupa Sale and Rentals" />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "http://schema.org",
               "@type": "LocalBusiness",
               name: "Gurukrupa Rental and Sales Services",
               description:
-                "Explore a wide range of high-quality rental products at Gurukrupa Rental & Sales Services Shop. From tools and equipment to party supplies, we offer affordable and reliable rental solutions. Serving Hinjawadi, Pune, Maharashtra, India with convenient rental services.",
+                "Rent the best bikes and scooters at affordable prices in Hinjawadi, Pune. We offer a wide range of two-wheelers and four-wheelers for rental.",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Lakshmi Chowk Road",
@@ -72,12 +76,12 @@ For more information or to make a booking, please visit our website at [hinjawad
               },
               telephone: "+91-7378753636",
               url: "https://hinjawadibike.com",
-              image:
-                "https://github.com/samirdhoran2000/prakash_bike_new/blob/main/public/Bike_Logo.png",
+              image: "https://hinjawadibike.com/Bike_Logo.png",
               priceRange: "$$",
             })}
           </script>
         </Helmet>
+
         <Routes>
           <Route
             path="/"
@@ -100,26 +104,13 @@ For more information or to make a booking, please visit our website at [hinjawad
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/about" element={<AboutUs />} />
-
-          {/* <Route
-            path="/bikes/royal_enfield_classic_350"
-            element={<RoyalEnfieldDetailPage />}
-          />
-          <Route path="/bikes/honda_activa_125" element={<HondaActiva125 />} />
-          <Route path="/bikes/tvs_raider" element={<TvsRaider125 />} />
-          <Route path="/bikes/tvs_jupiter" element={<TvsJupiter />} />
-          <Route path="/bikes/honda_shine" element={<HondaShine />} />
-          <Route path="/bikes/vespa_classic" element={<VespaClassic />} />
-          <Route path="/bikes/honda_unicorn" element={<HondaUnicorn />} />
-          <Route path="/bikes/any" element={<VehicleCard />} /> */}
           <Route path="/bikes/comming_soon" element={<CommingSoon />} />
-          {/* <Route path="/blog" element={<HondaShineBlogArticle />} /> */}
-
           <Route
             path="/vehicles/tata-altroz-icng"
             element={<VehicleDetailPage />}
           />
         </Routes>
+
         <Footer />
       </div>
     </Router>
