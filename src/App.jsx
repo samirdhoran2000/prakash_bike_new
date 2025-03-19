@@ -23,6 +23,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
+import WebAgencySite from "./components/Company.jsx";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-9DZ0BJ023F");
@@ -104,6 +105,7 @@ const App = () => {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/company" element={<WebAgencySite />} />
           <Route path="/bikes/comming_soon" element={<CommingSoon />} />
           <Route
             path="/vehicles/tata-altroz-icng"
