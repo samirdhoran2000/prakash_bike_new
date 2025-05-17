@@ -24,6 +24,7 @@ import AboutUs from "./components/AboutUs.jsx";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import WebAgencySite from "./components/Company.jsx";
+import FAQ from "./components/FAQ.jsx";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-9DZ0BJ023F");
@@ -99,6 +100,8 @@ const App = () => {
                 <FourWheelerAd />
                 <Testimonials />
                 <Contact />
+                <FAQ />
+
               </>
             }
           />
