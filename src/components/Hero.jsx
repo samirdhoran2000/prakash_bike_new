@@ -69,7 +69,7 @@ const Hero = () => {
       </div>
 
       {/* Animated diagonal lines */}
-      <div className="absolute inset-0 overflow-hidden z-0">
+      {/* <div className="absolute inset-0 overflow-hidden z-0">
         {[...Array(6)].map((_, i) => {
           const animationDuration = `${6 + Math.random() * 6}s`; // Random duration between 6s and 12s
           const animationDelay = `${Math.random() * 5}s`; // Random delay up to 5s
@@ -91,12 +91,12 @@ const Hero = () => {
             ></div>
           );
         })}
-      </div>
+      </div> */}
 
       {/* Animated scan line */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-full h-4 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent animate-scanline"></div>
-      </div>
+      </div> */}
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 sm:px-6 lg:px-8">
