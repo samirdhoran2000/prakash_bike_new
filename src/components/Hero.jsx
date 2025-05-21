@@ -1,6 +1,3 @@
-import React from "react";
-import Header from "./Header";
-
 const Hero = () => {
   return (
     <header className="relative bg-black text-white min-h-screen">
@@ -11,9 +8,6 @@ const Hero = () => {
           backgroundImage: "url('./Yellow_Bike.webp')",
         }}
       ></div>
-
-      {/* Navigation */}
-      <Header />
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 sm:px-6 lg:px-8">
