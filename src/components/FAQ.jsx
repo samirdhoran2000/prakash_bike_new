@@ -5,6 +5,26 @@ const FAQ = () => {
   // FAQ data in JSON format
   const faqData = [
     {
+      question: "What documents are required to rent a bike?",
+      answer:
+        "You will need a valid driver's license, a copy of your Aadhar card, and a security deposit.",
+    },
+    {
+      question: "What is your fuel policy?",
+      answer:
+        'The bike will be provided with some fuel, and you are expected to return it with a same tank. If the tank is not as same, a refueling charge will be applied.',
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer:
+        "You can cancel your booking at any time. Cancellations made within 24 hours of the rental period will be subject to a cancellation fee.",
+    },
+    {
+      question: "Are there any kilometer limits?",
+      answer:
+        "Our rentals come with no kilometer limits. You can ride as much as you want without worrying about extra charges.",
+    },
+    {
       question: "How do I rent a bike?",
       answer:
         "Renting a bike is easy! You can typically book directly through our website with just a few simple steps, or visit us in person at our convenient location.",
@@ -13,11 +33,6 @@ const FAQ = () => {
       question: "Can I book a bike in advance?",
       answer:
         "Absolutely! We highly recommend booking in advance, especially during busy seasons, to ensure you get the perfect bike for your adventure.",
-    },
-    {
-      question: "What is your cancellation policy?",
-      answer:
-        "We understand plans can change. We offer a flexible cancellation policy. Please refer to our terms and conditions for specifics, but we aim to make it as hassle-free as possible for you.",
     },
     {
       question: "What happens if I need to change my booking?",
@@ -108,14 +123,6 @@ const FAQ = () => {
           </div>
         </div>
 
-        {/* Launch Date Badge */}
-        <div className="mt-12 text-center">
-          <div className="inline-block bg-yellow-400/10 border border-yellow-400/30 rounded-full px-6 py-2">
-            <span className="text-yellow-400 font-semibold">
-              New Bike Models Available
-            </span>
-          </div>
-        </div>
 
         {/* CTA */}
         <div className="mt-12 text-center">
