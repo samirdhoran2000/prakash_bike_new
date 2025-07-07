@@ -1,4 +1,4 @@
-import { ChevronRight, Star, Clock, Gauge, Fuel, BookOpen } from "lucide-react";
+import { ChevronRight, Star, Clock, Gauge, Fuel, BookOpen, ShieldCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Modal = ({ bike, isOpen, onClose }) => {
@@ -88,28 +88,44 @@ const Modal = ({ bike, isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Price and Actions */}
-            <div className="flex items-center justify-between pt-4 border-t border-white/10">
-              <p className="text-lg font-medium text-white/90">
-                ₹{bike.ammount}
-                <span className="text-white/60">/day</span>
-              </p>
-              <div className="flex gap-3">
-                <button
-                  onClick={handleReadMore}
-                  className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/80 px-4 py-3 rounded-xl font-semibold transition-all duration-300"
-                >
-                  Read More
-                  <BookOpen size={20} />
-                </button>
-                <a
-                  href={`https://wa.me/917378753636?text=Hello%20Gurukrupa%20Sales%20and%20Services,%20I'd%20like%20to%20inquire%20about%20the%20${bike.bikeName}.`}
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:translate-x-1"
-                >
-                  Book Now
-                  <ChevronRight size={20} />
-                </a>
+            {/* Pricing Details */}
+            <div className="pt-4 border-t border-white/10">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <p className="text-sm text-white/60">Daily</p>
+                  <p className="text-lg font-medium text-white/90">₹{bike.ammount}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-white/60">Weekly</p>
+                  <p className="text-lg font-medium text-white/90">₹{bike.weeklyRate}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-white/60">Monthly</p>
+                  <p className="text-lg font-medium text-white/90">₹{bike.monthlyRate}</p>
+                </div>
               </div>
+              <div className="flex items-center justify-center mt-4 text-sm text-white/60">
+                <ShieldCheck size={16} className="text-yellow-400/80 mr-2" />
+                <span>Security Deposit: ₹{bike.deposit}</span>
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="flex items-center justify-between pt-4 border-t border-white/10">
+              <button
+                onClick={handleReadMore}
+                className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/80 px-4 py-3 rounded-xl font-semibold transition-all duration-300"
+              >
+                Read More
+                <BookOpen size={20} />
+              </button>
+              <a
+                href={`https://wa.me/917378753636?text=Hello%20Gurukrupa%20Sales%20and%20Services,%20I'd%20like%20to%20inquire%20about%20the%20${bike.bikeName}.`}
+                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:translate-x-1"
+              >
+                Book Now
+                <ChevronRight size={20} />
+              </a>
             </div>
           </div>
         </div>

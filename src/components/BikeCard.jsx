@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ChevronRight, Star, Clock, Gauge, Fuel } from "lucide-react";
+import { ChevronRight, Star, Clock, Gauge, Fuel, Calendar, ShieldCheck } from "lucide-react";
 import Modal from "./Modal";
 import BookingForm from "./BookingForm";
 
@@ -10,6 +10,9 @@ const BikeCard = ({
   bikeName,
   category,
   ammount,
+  weeklyRate,
+  monthlyRate,
+  deposit,
   mileage,
   topSpeed,
   fuelType,
@@ -62,15 +65,34 @@ const BikeCard = ({
             </div>
           </div>
 
-          {/* Price and Actions */}
+          {/* Pricing Details */}
+          <div className="pt-2 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-1 text-center">
+              <div>
+                <p className="text-xs text-white/60">Daily</p>
+                <p className="text-sm font-medium text-white/80">₹{ammount}</p>
+              </div>
+              <div>
+                <p className="text-xs text-white/60">Weekly</p>
+                <p className="text-sm font-medium text-white/80">
+                  ₹{weeklyRate}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-white/60">Monthly</p>
+                <p className="text-sm font-medium text-white/80">
+                  ₹{monthlyRate}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center mt-2 text-xs text-white/60">
+              <ShieldCheck size={12} className="text-yellow-400/80 mr-1" />
+              <span>Security Deposit: ₹{deposit}</span>
+            </div>
+          </div>
+
+          {/* Actions */}
           <div className="flex items-center justify-between pt-2 border-t border-white/10">
-            <p className="text-sm font-medium text-white/80 group-hover:text-yellow-400/90 transition-colors duration-300">
-              <span className="text-xs text-white/40 font-normal mr-1">
-                Est.
-              </span>
-              ₹{ammount}
-              <span className="text-white/60">/day</span>
-            </p>
             <div className="flex gap-2">
               <button
                 onClick={() => setIsBooking(true)}
@@ -97,6 +119,9 @@ const BikeCard = ({
           bikeName,
           category,
           ammount,
+          weeklyRate,
+          monthlyRate,
+          deposit,
           mileage,
           topSpeed,
           fuelType,
