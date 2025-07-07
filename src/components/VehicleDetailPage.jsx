@@ -1,8 +1,11 @@
 import { ArrowLeft, Shield, Settings, Heart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import BookingForm from "./BookingForm";
 
 const VehicleDetailPage = () => {
   const navigate = useNavigate();
+  const [isBooking, setIsBooking] = useState(false);
 
   return (
     <>
@@ -34,12 +37,12 @@ const VehicleDetailPage = () => {
                   without compromising on performance, safety, or comfort.
                 </p>
                 <div className="flex gap-4 mb-6">
-                  <a
-                    href="https://wa.me/917378753636?text=Hello%20Gurukrupa%20Sales%20and%20Services,%20I'd%20like%20to%20inquire%20about%20the%20Tata%20Altroz%20iCNG."
+                  <button
+                    onClick={() => setIsBooking(true)}
                     className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-medium transition-all duration-300"
                   >
                     Book Now
-                  </a>
+                  </button>
                   <span className="text-2xl font-bold text-white/90 flex items-center">
                     ₹2999
                     <span className="text-white/60 text-base ml-1">/day</span>
@@ -171,6 +174,14 @@ const VehicleDetailPage = () => {
           </div>
         </div>
       </div>
+      {isBooking && (
+        <BookingForm
+          bikeName="Tata Altroz iCNG"
+          bikeImg="/Tata_Altroz.jpeg"
+          rent="2999"
+          onClose={() => setIsBooking(false)}
+        />
+      )}
     </>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronRight, Star, Clock, Gauge, Fuel } from "lucide-react";
 import Modal from "./Modal";
+import BookingForm from "./BookingForm";
 
 const BikeCard = ({
   bikeId,
@@ -16,6 +17,7 @@ const BikeCard = ({
   navigateTo
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isBooking, setIsBooking] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -71,12 +73,10 @@ const BikeCard = ({
             </p>
             <div className="flex gap-2">
               <button
-                // onClick={() => navigate(navigateTo)}
-                onClick={() => navigate("/bikes/comming_soon")}
-                className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/80 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                onClick={() => setIsBooking(true)}
+                className="inline-flex items-center gap-1 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
               >
-                Blog
-                <ChevronRight size={12} />
+                Book Now
               </button>
               <button
                 onClick={() => setIsModalOpen(true)}
@@ -106,6 +106,14 @@ const BikeCard = ({
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+      {isBooking && (
+        <BookingForm
+          bikeName={bikeName}
+          bikeImg={imgSrc}
+          rent={ammount}
+          onClose={() => setIsBooking(false)}
+        />
+      )}
     </article>
   );
 };
