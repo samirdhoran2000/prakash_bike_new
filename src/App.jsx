@@ -18,6 +18,7 @@ import TermsOfService from "./components/TermsOfService";
 import FourWheelerAd from "./components/FourWheelerAd";
 import About from "./components/About";
 import VehicleDetailPage from "./components/VehicleDetailPage";
+import BikeCatalog from "./components/BikeCatalog.jsx";
 import CommingSoon from "./components/CommingSoon.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import AboutUs from "./components/AboutUs.jsx";
@@ -80,7 +81,7 @@ const App = () => {
               telephone: "+91-7378753636",
               url: "https://hinjawadibike.com",
               image: "https://hinjawadibike.com/Bike_Logo.png",
-              priceRange: "$$",
+              priceRange: "$",
             })}
           </script>
         </Helmet>
@@ -110,6 +111,7 @@ const App = () => {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/about" element={<AboutUs />} />    
+          <Route path="/bikes" element={<BikeCatalog />} />
           <Route path="/bikes/comming_soon" element={<CommingSoon />} />
           <Route
             path="/vehicles/tata-altroz-icng"
