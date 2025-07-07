@@ -25,6 +25,7 @@ import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import FAQ from "./components/FAQ.jsx";
 import Header from "./components/Header.jsx";
+import TwoWheelerShowcase from "./components/TwoWheelerExample.jsx";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-9DZ0BJ023F");
@@ -114,6 +115,7 @@ const App = () => {
             path="/vehicles/tata-altroz-icng"
             element={<VehicleDetailPage />}
           />
+          <Route path="/two" element={<TwoWheelerShowcase />} />
         </Routes>
 
         <Footer />

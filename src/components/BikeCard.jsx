@@ -62,14 +62,17 @@ const BikeCard = ({
 
           {/* Price and Actions */}
           <div className="flex items-center justify-between pt-2 border-t border-white/10">
-            <p className="text-sm font-medium text-white/80">
+            <p className="text-sm font-medium text-white/80 group-hover:text-yellow-400/90 transition-colors duration-300">
+              <span className="text-xs text-white/40 font-normal mr-1">
+                Est.
+              </span>
               ₹{ammount}
               <span className="text-white/60">/day</span>
             </p>
             <div className="flex gap-2">
               <button
                 // onClick={() => navigate(navigateTo)}
-                onClick={() => navigate('/bikes/comming_soon')}
+                onClick={() => navigate("/bikes/comming_soon")}
                 className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/80 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
               >
                 Blog
@@ -98,7 +101,7 @@ const BikeCard = ({
           topSpeed,
           fuelType,
           desc,
-          navigateTo
+          navigateTo,
         }}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

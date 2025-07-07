@@ -6,7 +6,6 @@ const Hero = () => {
 
   return (
     <header className="relative bg-black text-white min-h-screen overflow-hidden">
- 
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40 bg-no-repeat"
         style={{
@@ -62,11 +61,11 @@ const Hero = () => {
       </div>
 
       {/* Animated circles (kept commented out as in original code) */}
-      
+
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-0">
         {[...Array(4)].map((_, i) => {
           const animationDuration = `${4 + Math.random() * 4}s`; // Random duration between 4s and 8s for frequency
-          const animationDelay = `${1+Math.random() * 2}s`; // Random delay up to 2s
+          const animationDelay = `${1 + Math.random() * 2}s`; // Random delay up to 2s
           const rotation = `${Math.random() * 360}deg`; // Random rotation for "direction"
           return (
             <div
@@ -83,7 +82,6 @@ const Hero = () => {
           );
         })}
       </div>
-     
 
       {/* Animated diagonal lines (kept commented out as in original code) */}
       {/*
@@ -132,8 +130,8 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-          <a href="tel:+917378753636" className="group">
-            <button className="relative flex items-center justify-center gap-2 bg-black border border-yellow-400 text-yellow-400 px-8 py-3 rounded-lg font-bold text-base sm:text-lg overflow-hidden">
+          <a href="tel:+917378753636" className="group flex-1">
+            <button className=" min-w-48 relative flex items-center justify-center gap-2 bg-black border border-yellow-400 text-yellow-400 px-8 py-3 rounded-lg font-bold text-base sm:text-lg overflow-hidden">
               {/* Button animation overlay */}
               <div className="absolute inset-0 w-full h-full">
                 <div className="absolute inset-0 animate-shine"></div>
@@ -145,8 +143,8 @@ const Hero = () => {
             </button>
           </a>
 
-          <a href="#contact" className="group">
-            <button className="relative flex items-center justify-center gap-2 bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold text-base sm:text-lg overflow-hidden">
+          <a href="#contact" className="group flex-1">
+            <button className=" min-w-48 relative flex items-center justify-center gap-2 bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold text-base sm:text-lg overflow-hidden">
               {/* Button animation overlay */}
               <div className="absolute inset-0 w-full h-full">
                 <div className="absolute inset-0 animate-shine"></div>
