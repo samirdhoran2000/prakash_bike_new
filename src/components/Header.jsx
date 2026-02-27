@@ -47,6 +47,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-8">
             <li>
+              <Link
+                to="/bikes"
+                className="hover:text-yellow-400 transition-colors text-white"
+              >
+                Fleet
+              </Link>
+            </li>
+            <li>
               <a
                 href="#services"
                 className="hover:text-yellow-400 transition-colors text-white"
@@ -85,6 +93,15 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-black shadow-lg">
             <ul className="px-4 py-4 space-y-4 flex flex-col justify-center items-center">
+              <li>
+                <Link
+                  to="/bikes"
+                  className="block text-white hover:text-yellow-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Fleet
+                </Link>
+              </li>
               <li>
                 <a
                   href="#services"

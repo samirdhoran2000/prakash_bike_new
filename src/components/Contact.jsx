@@ -88,10 +88,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-r from-black via-gray-900 to-black text-gray-200"
-    >
+    <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black text-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -179,7 +176,10 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-yellow-400/20">
+          <div
+            id="contact"
+            className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-yellow-400/20"
+          >
             <h3 className="text-2xl font-semibold text-yellow-400 mb-6">
               Send Us a Message
             </h3>
@@ -253,7 +253,7 @@ const Contact = () => {
                   htmlFor="email"
                   className="block text-gray-300 mb-1 text-sm"
                 >
-                   Email {/*<span className="text-yellow-400">*</span> */}
+                  Email {/*<span className="text-yellow-400">*</span> */}
                 </label>
                 <div className="relative">
                   <input

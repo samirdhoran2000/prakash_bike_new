@@ -18,13 +18,15 @@ import TermsOfService from "./components/TermsOfService";
 import FourWheelerAd from "./components/FourWheelerAd";
 import About from "./components/About";
 import VehicleDetailPage from "./components/VehicleDetailPage";
+import BikeCatalog from "./components/BikeCatalog.jsx";
 import CommingSoon from "./components/CommingSoon.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
-import WebAgencySite from "./components/Company.jsx";
 import FAQ from "./components/FAQ.jsx";
+import Header from "./components/Header.jsx";
+import TwoWheelerShowcase from "./components/TwoWheelerExample.jsx";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-9DZ0BJ023F");
@@ -49,12 +51,12 @@ const App = () => {
         {/* SEO Optimization */}
         <Helmet>
           <title>
-            Gurukrupa Sale and Rentals | Two-Wheeler & Four-Wheeler Rental |
-            Hinjawadi Rides
+            Gurukrupa Sales & Rentals | Two-Wheeler & Four-Wheeler Rentals |
+            Hinjawadi Rides | Two Wheelers Rentals in Hinjawadi (Hinjewadi), Pune
           </title>
           <meta
             name="description"
-            content="Rent the best bikes and scooters at affordable prices in Hinjawadi, Pune. Explore our range of two-wheelers and four-wheelers for an amazing ride."
+            content="Rent the best bikes and scooters at affordable prices in Hinjawadi (Hinjewadi), Pune. Explore our range of two-wheelers and four-wheelers for an amazing ride."
           />
           <meta
             name="keywords"
@@ -79,11 +81,12 @@ const App = () => {
               telephone: "+91-7378753636",
               url: "https://hinjawadibike.com",
               image: "https://hinjawadibike.com/Bike_Logo.png",
-              priceRange: "$$",
+              priceRange: "$",
             })}
           </script>
         </Helmet>
 
+          <Header />
         <Routes>
           <Route
             path="/"
@@ -107,13 +110,14 @@ const App = () => {
           />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/company" element={<WebAgencySite />} />
+          <Route path="/about" element={<AboutUs />} />    
+          <Route path="/bikes" element={<BikeCatalog />} />
           <Route path="/bikes/comming_soon" element={<CommingSoon />} />
           <Route
             path="/vehicles/tata-altroz-icng"
             element={<VehicleDetailPage />}
           />
+          <Route path="/two" element={<TwoWheelerShowcase />} />
         </Routes>
 
         <Footer />
